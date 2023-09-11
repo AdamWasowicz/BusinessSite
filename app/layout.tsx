@@ -1,8 +1,8 @@
-import Footer from '@/components/footer/footer'
-import './globals.scss'
+import Footer from '@/src/components/footer/footer'
+import '../src/styles/globals.scss'
 import type { Metadata } from 'next'
-import Navigation from '@/components/navigation/navigation'
-import PageLayout from '@/components/page-layout/pageLayout'
+import Navigation from '@/src/components/navigation/navigation'
+import PageLayout from '@/src/components/page-layout/pageLayout'
 
 export const metadata: Metadata = {
   title: 'Business Site',

@@ -6,9 +6,9 @@ interface IPageLayout {
 
 const PageLayout: React.FC<IPageLayout> = (props) => {
     return (
-        <div className={styles.pageLayout}>
+        <main className={styles.pageLayout}>
             {props.children}
-        </div>
+        </main>
     )
 }
 
