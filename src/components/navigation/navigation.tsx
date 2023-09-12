@@ -6,17 +6,17 @@ import { LinkParams } from '@/src/types/types';
 const Navigation: React.FC = () => {
     const navigationItems: LinkParams[] = [
         {
-            href: '#about',
+            href: '/#about',
             text: 'O nas'
         },
 
         {
-            href: '#services',
+            href: '/#services',
             text: 'Usługi'
         },
 
         {
-            href: '#contact',
+            href: '/#contact',
             text: 'Kontakt'
         }
     ]

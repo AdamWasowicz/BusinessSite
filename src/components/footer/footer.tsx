@@ -1,23 +1,21 @@
 import styles from './footer.module.scss';
 import Logo from '../UI/logo/logo';
-import { LinkParams } from '@/src/types/types';
-import Link from 'next/link';
+import { 
+    faGithub as gitIcon,
+    faLinkedin as linkedinIcon 
+} from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Footer: React.FC = () => {
-    const linkItems: LinkParams[] = [
+    const iconList: {href: string, icon: IconProp}[] = [
         {
-            href: '/legal',
-            text: 'Legal Stuff',
+            href: 'https://github.com/AdamWasowicz',
+            icon: gitIcon
         },
-
         {
-            href: '/privacy',
-            text: 'Privacy'
-        },
-
-        {
-            href: '/security',
-            text: 'Security'
+            href: 'https://www.linkedin.com/in/adam-wąsowicz',
+            icon: linkedinIcon
         }
     ]
 
@@ -30,15 +28,19 @@ const Footer: React.FC = () => {
 
                 <ul className={styles.list}>
                     {
-                        linkItems.map((item, key) => {
+                        iconList.map((item, key) => {
                             return (
                                 <li key={key}>
-                                    <Link 
-                                        className={styles.listItem}
+                                    <a
+                                        target="_blank"
                                         href={item.href}
+                                        rel="noopener noreferrer"
                                     >
-                                        {item.text}
-                                    </Link>
+                                        <FontAwesomeIcon 
+                                            className={styles.listItem} 
+                                            icon={item.icon}
+                                        />
+                                    </a>
                                 </li>
                             )
                         })

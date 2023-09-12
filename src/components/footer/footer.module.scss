@@ -3,7 +3,7 @@
     width: 100%;
 
     // Background
-    background-color: var(--secondary-500);
+    background-color: var(--secondary-700);
     border-top: 2px solid var(--secondary-400)
 }
 
@@ -47,26 +47,12 @@
 .listItem {
     // Size and Positon
     height: 100%;
-    padding: 8px 16px;
+    margin-left: 32px;
     margin-right: 32px;
 
-    // Flex
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     // Text
-    text-decoration: none;
-    font-family: var(--font-header);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 4px;
-    text-align: center;
+    font-size: 48px;
     color: #fff;
-
-    // Background
-    border-bottom: 1px solid white;
-    //background-color: rgb(100, 100, 100);
 
     // Other
     transition: 0.2s;
@@ -75,9 +61,6 @@
     &:hover {
         // Text
         color: var(--primary-500);
-
-        // Background
-        border-bottom: 1px solid var(--primary-500);
 
         // Other
         transition: 0.2s;

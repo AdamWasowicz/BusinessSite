@@ -3,6 +3,9 @@ import '../src/styles/globals.scss'
 import type { Metadata } from 'next'
 import Navigation from '@/src/components/navigation/navigation'
 import PageLayout from '@/src/components/page-layout/pageLayout'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: 'Business Site',
