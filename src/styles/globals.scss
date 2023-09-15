@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
 //// Lato
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+// Open Sans
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -44,7 +46,7 @@
   --font-title:     'Montserrat';
   --font-header:    'Rubik';
   --font-subHeader: 'Inter';
-  --font-text:      'Lato'
+  --font-text:      'Open Sans'
 }
 
 body {

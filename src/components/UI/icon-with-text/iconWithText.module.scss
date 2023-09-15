@@ -14,14 +14,12 @@
 .icon {
     // Size and Position
     margin-bottom: 8px;
-    //color: inherit;
-    //font-size: inherit;
 }
 
 .text {
     // Text
-    font-family: var(--font-subHeader);
-    letter-spacing: 2px;
+    font-family: var(--font-text);
+    letter-spacing: 1px;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 28px;
 }

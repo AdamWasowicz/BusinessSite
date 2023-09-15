@@ -7,7 +7,7 @@ const Navigation: React.FC = () => {
     const navigationItems: LinkParams[] = [
         {
             href: '/#about',
-            text: 'O nas'
+            text: 'O mnie'
         },
 
         {

@@ -8,17 +8,33 @@
     // Flex
     display: flex;
     flex-direction: column;
-    row-gap: 80px;
+    row-gap: 156px;
 
     // Text
     color: white;
+}
+
+.serviceList {
+    // Flex
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    row-gap: 48px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    // Text
+    font-size: 80px;
+    color: var(--primary-400);
 }
 
 .sectionWithIcons {
     // Text
     text-align: center;
     color: var(--primary-400);
-    font-size: 64px;
+    font-size: 80px;
 }
 
 .techList {

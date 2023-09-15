@@ -11,18 +11,24 @@
 .content {
     // Size and Position
     width: 100%;
-    padding: 24px;
+    padding: 36px;
 }
 
-.header {
+.textContentContainer {
     // Size and Position
-    margin-bottom: 16px;
+    padding: 16px;
 
-    // Text
-    font-family: var(--font-header);
-    font-size: 48px;
-    font-weight: 400;
-    letter-spacing: 3px;
+    // Flex
+    flex-grow: 1;
+
+    // Background
+    background-color: var(--secondary-600);
+    border: 2px solid var(--secondary-400)
+}
+
+.borderBottom2px {
+    // Background
+    border-bottom: 2px solid white;
 }
 
 .text {
@@ -40,7 +46,7 @@
     height: 400px;
 
     // Background
-    border: 2px solid var(--secondary-300);
+    border: 1px solid var(--secondary-300);
 
     // Image
     object-fit: contain;    
@@ -62,12 +68,9 @@
 }
 
 .iconContainer {
-    // Size and Position
-    margin-top: 32px;
-
     // Flex
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
