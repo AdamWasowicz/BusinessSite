@@ -1,3 +1,5 @@
+"use client"
+
 import { Section, SectionWithContent, SectionWithImage } from '@/src/components/UI/section/section';
 import styles from './homePage.module.scss';
 import Image from 'next/image';
@@ -5,9 +7,22 @@ import IconWithText from '@/src/components/UI/icon-with-text/iconWithText';
 import Header from '@/src/components/UI/header/header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import homePageData from './homePage.u';
+import Modal from '@/src/components/UI/modal/modal';
+import Button from '@/src/components/UI/button/button';
+import { useState } from 'react';
 
 const HomePage: React.FC = () => {
     const data = homePageData();
+    const [modalOpen, setModalOpen] = useState<Boolean>(false);
+
+    const openModal = () => {
+        setModalOpen(true);
+    }
+
+    const closeModal = () => {
+        setModalOpen(false);
+    }
+
 
 
     return (
@@ -16,17 +31,36 @@ const HomePage: React.FC = () => {
                 className={styles.borderBottom2px}
                 id='about' 
                 header='O mnie'
-                text='Nazywm się Adam Wąsowicz, jestem programistą freelancerem z małego miasta w województwie opolskim. Ukończyłem studia drugiego stopnia na Politechince Wrocławskiej i otrzymałem tytuł magistra inżyniera informatyki technicznej. Prowadzę jednosobową firmę oferującą usługi informatyczne.'
+                text='Nazywm się Adam Wąsowicz, jestem programistą freelancerem zajmującym się głównie aplikacjami webowymi. Ukończyłem studia drugiego stopnia na Politechince Wrocławskiej i otrzymałem tytuł magistra inżyniera informatyki technicznej. Prowadzę jednosobową firmę oferującą usługi informatyczne.'
                 imageUrl={'/images/guy_with_computer.jpg'}
                 imagePosition='left'
             />
 
             <SectionWithImage
                 header='Co oferuję?'
-                text='Nie wszyscy możemy sobie pozwolić na profesionalny software house który za projekty pobiera duże pieniądze, dlatego chciałbym być alternatywą dla tych którzy chcą rozwinąć swój biznes ale nie posiadają dużych środków na oprogramowanie lub stronę internetową.'
+                text='Oferuję usługi informatyczne takie jak: tworzenie stron internetowych, tworzenie aplikacji webowych oraz korepetycje w atrakcyjnych cenach. Całą listę usług można znaleźć w sekcji pod tytułem "Moje usługi".'
                 imageUrl={'/images/service.jpg'}
                 imagePosition='right'
-            />
+            >
+                {
+                    modalOpen &&
+                    <Modal onClose={closeModal}>
+                        <div className={styles.paddingAround}>
+                            <Header className={styles.modalHeader}>Jak działam</Header>
+                            <ol className={styles.orderedList}>
+                                <li className={styles.orderedListElement}>Umawaimy się na rozmowę (najlepiej przez Teamsy)</li>
+                                <li className={styles.orderedListElement}>Podczas rozmowy wyjaśniasz czego oczekujesz</li>
+                                <li className={styles.orderedListElement}>Po uzgodnieniu wymagań ustalamy cene</li>
+                                <li className={styles.orderedListElement}>Po zaprojektowaniu twojej wizji przedstawiam ci wygląd produktu</li>
+                                <li className={styles.orderedListElement}>Podczas trwania projektu na bierząco dostajesz wgląd w aktułalny stan projektu oraz możliwość zgłoszenia swoich uwag</li>
+                                <li className={styles.orderedListElement}>Po końcowej akceptacji płacisz ustaloną na początku kwote i dostajesz końcowy rezultat</li>
+                                <li className={styles.orderedListElement}>W przypadku gdy potrzebujesz zmian w swoim produkcie to zaczynamy od punktu nr.1</li>
+                            </ol>
+                        </div>
+                    </Modal>
+                }
+                <Button type='outlined' className={styles.button} onClick={openModal}>Jak skorzystać?</Button>
+            </SectionWithImage>
 
             <SectionWithContent
                 className='center'

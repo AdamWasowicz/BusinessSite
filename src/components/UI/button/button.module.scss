@@ -1,7 +1,6 @@
 .button {
     // Size and Position
     padding: 8px 16px;
-    min-width: 250px;
     min-height: 100px;
 
     // Text
@@ -11,6 +10,11 @@
 
     &:hover {
         cursor: pointer;
+    }
+
+    @media (max-width: 320px) {
+        font-size: 28px;
+        padding: 4px 8px;
     }
 }
 
@@ -42,18 +46,18 @@
 
     // Background
     background-color: transparent;
-    border: 4px ridge var(--primary-400);
+    border: 3px ridge var(--primary-400);
 
     // Other
     transition: 0.2s;
 
     &:hover {
         // Text
-        color: white;
+        color: var(--primary-200);
 
         // Background
-        background-color: var(--primary-500);
-        border-color: white;
+        background-color: var(--secondary-400);
+        border-color: var(--primary-200);
 
         // Other
         transition: 0.2s;

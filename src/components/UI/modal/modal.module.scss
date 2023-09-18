@@ -1,0 +1,74 @@
+.cover {
+    // Size and Position
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+
+    // Background
+    background-color: var(--secondary-800);
+    opacity: 0.8;
+}
+
+.modal {
+    // Size and Position
+    width: 60vw;
+    min-height: 40vh;
+    position: absolute;
+    z-index: 16;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    // Background
+    background-color: var(--secondary-700);
+    border: 2px solid var(--primary-500);
+
+    // @media
+    @media (max-width: 764px) {
+        width: 70vw;
+    }
+    @media (max-width: 640px) {
+        width: 80vw;
+    }
+
+}
+
+.closeButton {
+    // Size and Position
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: calc(100% - 25px);
+    top: -25px;
+
+    // Text
+    font-size: 36px;
+    font-family: var(--font-monoSpace);
+    text-align: center;
+
+    // Flex
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    // Background
+    background-color: var(--secondary-700);
+    border: 2px solid var(--secondary-100);
+    border-radius: 100%;
+
+    // Other
+    transition: 0.1s;
+
+    &:hover {
+        // Background
+        background-color: var(--secondary-600);
+        color: var(--primary-400);
+        border-color: var(--primary-400);
+
+        // Other
+        transition: 0.1s;
+        cursor: pointer;
+    }
+}

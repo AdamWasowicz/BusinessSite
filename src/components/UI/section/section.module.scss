@@ -58,7 +58,8 @@
 
 .borderBottom2px {
     // Background
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--primary-400);
+    color: var(--primary-400);
 }
 
 .text {
