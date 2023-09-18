@@ -1,79 +1,13 @@
-import { SectionWithContent, SectionWithImage } from '@/src/components/UI/section/section';
+import { Section, SectionWithContent, SectionWithImage } from '@/src/components/UI/section/section';
 import styles from './homePage.module.scss';
-import { 
-    faCode as codeIcon,
-    faBook as bookIcon,
-    faCircleQuestion as questionIcon,
-    faKeyboard as keyBoardIcon,
-    faMicrochip as chipIcon
-} from '@fortawesome/free-solid-svg-icons';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import Image from 'next/image';
 import IconWithText from '@/src/components/UI/icon-with-text/iconWithText';
+import Header from '@/src/components/UI/header/header';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import homePageData from './homePage.u';
 
 const HomePage: React.FC = () => {
-    const iconTupleArray: {text: string, icon: IconProp}[] = [
-        {
-            text: 'Aplikacje webowe',
-            icon: codeIcon
-        },
-
-        {
-            text: 'Strony internetowe',
-            icon: keyBoardIcon
-        },
-
-        {
-            text: 'Oprogramowanie',
-            icon: chipIcon
-        },
-
-
-        {
-            text: 'Korepetycje',
-            icon: bookIcon
-        },
-
-        // {
-        //     text: 'Pomoc techniczna',
-        //     icon: questionIcon
-        // }
-    ]
-
-    const techStackArray: {alt: string, href: string}[] = [
-        {
-            alt: 'JavaScript',
-            href:'/images/javascript.png'
-        },
-
-        {
-            alt: 'TypeScript',
-            href:'/images/typescript.png'
-        },
-
-        {
-            alt: 'React',
-            href:'/images/react.png'
-        },
-
-
-        {
-            alt: 'NextJs',
-            href:'/images/nextJs.webp'
-        },
-
-        {
-            alt: '.NET',
-            href: '/images/dotNet.png'
-        },
-
-        {
-            alt: 'Docker',
-            href: '/images/docker.png'
-        }
-
-
-    ]
+    const data = homePageData();
 
 
     return (
@@ -101,7 +35,7 @@ const HomePage: React.FC = () => {
             >
                 <div className={styles.serviceList}>
                     {
-                        iconTupleArray.map((item, key) => {
+                        data.iconTupleArray.map((item, key) => {
                             return (
                                 <IconWithText key={key} className={styles.service} iconId={item.icon} text={item.text}/>
                             )
@@ -116,7 +50,7 @@ const HomePage: React.FC = () => {
             >
                 <div className={styles.techList}>
                     {
-                        techStackArray.map((item, key) => 
+                        data.techStackArray.map((item, key) => 
                             (<Image 
                                 key={key} 
                                 src={item.href}
@@ -128,6 +62,24 @@ const HomePage: React.FC = () => {
                     }
                 </div>
             </SectionWithContent>
+
+            <Section
+                className='center'
+                id='contact'            
+            >
+                <Header>Kontakt</Header>
+                
+                <ul className={styles.contactMethods}>
+                    {
+                        data.contactMethods.map((item, key) => 
+                            <li key={key} className={styles.contactMethodRow}>
+                                <FontAwesomeIcon className={styles.contactMethodIcon} icon={item.icon}/>
+                                <p className={styles.contactMethodText}>{item.text}</p>
+                            </li>   
+                        )
+                    }
+                </ul>
+            </Section>
         </div>
     )
 }

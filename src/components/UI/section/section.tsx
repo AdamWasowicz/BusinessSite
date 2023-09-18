@@ -1,9 +1,25 @@
 import styles from './section.module.scss';
 import Image from 'next/image';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-import IconWithText from '../icon-with-text/iconWithText';
 import Header from '../header/header';
 import Paragraph from '../paragraph/paragraph';
+
+
+// Section
+interface ISection {
+    children: JSX.Element | JSX.Element[],
+    className?: string
+    id?: string
+}
+
+export const Section: React.FC<ISection> = (props) => {
+    return (
+        <section className={styles.section + " " + props.className} id={props.id}>
+            <div className={styles.veryDirectContent}>
+                { props.children }
+            </div>
+        </section>
+    )
+}
 
 
 // SectionWithImage
@@ -58,7 +74,7 @@ interface ISectionWithContent {
 export const SectionWithContent: React.FC<ISectionWithContent> = (props) => {
     return (
         <section id={props.id} className={styles.section + " " +  props.className}>
-            <div className={styles.content}>
+            <div className={styles.directContent}>
                 <Header>{props.header}</Header>
 
                 {props.children}

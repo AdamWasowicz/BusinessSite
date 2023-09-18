@@ -1,7 +1,6 @@
 .navigation {
     // Size and Position
     width: 100%;
-    //height: 64px;
 
     // Background
     background-color: var(--secondary-700);
@@ -17,6 +16,22 @@
     // Flex
     display: flex;
     flex-direction: row;
+
+    // @media
+    @media (max-width: 764px) {
+        // Text
+        text-align: center;
+
+        // Flex
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    @media (max-width: 480px) {
+        // Siza and Position
+        padding: 0;
+        padding-bottom: 8px;
+    }
 }
 
 .logo {
@@ -30,15 +45,37 @@
     flex-direction: row;
     justify-content: flex-end;
     flex-grow: 1;
+    column-gap: 24px;
 
     // Other
     list-style-type: none;
+
+    // @media
+    @media (max-width: 764px) {
+        // Flex
+        justify-content: space-around;
+    }
+
+    @media (max-width: 640px) {
+        column-gap: 16px;
+    }
+
+    @media (max-width: 480px) {
+        // Flex
+        flex-direction: column;
+        row-gap: 24px;
+
+        &[hidden] {
+            display: none;
+        }
+    }
 }
 
 .listItem {
     // Size and Positon
     height: 100%;
-    padding: 0px 10px;
+    width: 100%;
+    padding: 10px 10px;
     margin-right: 24px;
 
     // Flex
@@ -60,6 +97,8 @@
     // Other
     transition: 0.2s;
 
+    border-bottom: 1px solid var(--secondary-300);
+
     &:hover {
         // Text
         color: var(--primary-500);
@@ -69,5 +108,34 @@
 
         // Other
         transition: 0.2s;
+    }
+
+    // @media
+    @media (max-width: 480px) {
+        //background-color: red;
+        border-bottom: 1px solid var(--secondary-300);
+    }
+}
+
+.expandButton {
+    display: none;
+
+    // @media
+    @media (max-width: 480px) {
+        display: block;
+    }
+}
+
+.iconButton {
+    // Text
+    font-size: 64px;
+    color: white;
+
+    &:hover {
+        // Text
+        color: var(--primary-500);
+
+        // Other
+        cursor: pointer;
     }
 }

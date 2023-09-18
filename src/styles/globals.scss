@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 // Open Sans
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+// Source Code Pro
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -46,7 +48,8 @@
   --font-title:     'Montserrat';
   --font-header:    'Rubik';
   --font-subHeader: 'Inter';
-  --font-text:      'Open Sans'
+  --font-text:      'Open Sans';
+  --font-monoSpace: 'Source Code Pro';
 }
 
 body {
@@ -63,6 +66,9 @@ body {
 }
 
 .center {
-  // Text
   text-align: center;
+}
+
+.hidden {
+  display: none;
 }

@@ -1,0 +1,134 @@
+.home {
+    // Size and Position
+    width: 100%;
+    min-height: 120vh;
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    // Flex
+    display: flex;
+    flex-direction: column;
+    row-gap: 156px;
+
+    // Text
+    color: white;
+}
+
+.serviceList {
+    // Flex
+    display: flex;
+    flex-direction: row;
+    column-gap: 48px;
+    row-gap: 48px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    // Text
+    font-size: 80px;
+    color: var(--primary-400);
+}
+
+.sectionWithIcons {
+    // Text
+    text-align: center;
+    color: var(--primary-400);
+    font-size: 80px;
+}
+
+.techList {
+    // Size and Position
+    width: 100%;
+    
+    // Flex
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 48px;
+    row-gap: 48px;
+    flex-wrap: wrap;
+}
+
+.contactMethods {
+    // Flex
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    // Other
+    list-style-type: none;
+}
+
+.contactMethodRow {
+    // Size and Position
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 16px;
+
+    // Flex
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 24px;
+
+    // Background
+    background-color: var(--secondary-600);
+    border: 2px solid var(--secondary-400);
+
+    // @media
+    @media (max-width: 1024px) {
+        width: 90%;
+        min-width: none;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    @media (max-width: 320px) {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+.contactMethodIcon {
+    // Size and Position
+    width: 150px;
+
+    // Text
+    font-size: 64px;//126px;
+    color: var(--primary-400);
+
+    // @media
+    @media (max-width: 480px) {
+        // Text
+        font-size: 64px;
+    }
+}
+
+.contactMethodText {
+    // Flex
+    flex-grow: 1;
+
+    // Text
+    font-size: 40px;
+    color: white;
+    text-align: left;
+    font-family: var(--font-monoSpace);
+    font-weight: 300;
+
+    // @media
+    @media (max-width: 640px) {
+        // Text
+        font-size: 28px;
+    }
+    @media (max-width: 480px) {
+        // Text
+        font-size: 24px;
+    }
+
+}
