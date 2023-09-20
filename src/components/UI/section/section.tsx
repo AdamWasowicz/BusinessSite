@@ -46,8 +46,8 @@ export const SectionWithImage: React.FC<ISectionWithImage> = (props) => {
                         className={styles.image}
                         src={props.imageUrl}
                         alt='Me'
-                        width={500}
-                        height={500}
+                        width={400}
+                        height={400}
                     />
 
                     <div className={styles.textContentContainer}>

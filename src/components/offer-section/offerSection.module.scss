@@ -1,0 +1,50 @@
+.paddingAround {
+    // size and Position
+    padding: 0px 36px;
+    padding-bottom: 36px;
+}
+
+.modalHeader {
+    // Background
+    border-bottom: 2px solid var(--primary-400);
+    color: var(--primary-400);
+
+    // @media
+    @media (max-width: 320px) {
+        font-size: 36px;
+    }
+}
+
+// orderedList
+.orderedList {
+    display: block;
+    padding-left: 32px;
+}
+
+.orderedListElement {
+    // Size and Position
+    margin-bottom: 12px;
+    padding: 8px;
+
+    // Text
+    font-family: var(--font-text);
+    font-size: 16px;
+    font-weight: 300;
+    //word-break: break-all;
+    word-wrap: break-word;
+
+    
+    // Background
+    background-color: var(--secondary-600);
+    border: 1px solid var(--secondary-400);
+
+    &::marker  {
+        color: var(--primary-400);
+        font-size: 24px;
+    }
+}
+
+.button {
+    // Size and Position
+    margin-top: 24px;
+}
