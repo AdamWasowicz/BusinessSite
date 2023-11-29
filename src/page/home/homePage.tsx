@@ -7,6 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import homePageData from './homePage.u';
 import OfferSection from '@/src/components/offer-section/offerSection';
 
+// Images
+import gwc from '../../../public/images/guy_with_computer.jpg'
+
 const HomePage: React.FC = () => {
     const data = homePageData();
 
@@ -17,7 +20,7 @@ const HomePage: React.FC = () => {
                 id='about' 
                 header='O mnie'
                 text='Nazywm się Adam Wąsowicz, jestem programistą freelancerem zajmującym się głównie aplikacjami webowymi. Ukończyłem studia drugiego stopnia na Politechince Wrocławskiej i otrzymałem tytuł magistra inżyniera informatyki technicznej. Prowadzę jednosobową firmę oferującą usługi informatyczne.'
-                imageUrl={'/images/guy_with_computer.jpg'}
+                imageUrl={gwc}
                 imagePosition='left'
             />
 

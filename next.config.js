@@ -7,7 +7,7 @@ const nextConfig = {
     output: 'export',
 
     // GitHub pages
-    basePath: "/business-site",
+    basePath: environment == "production" ? "/business-site" : '',
 
     reactStrictMode: true,
 

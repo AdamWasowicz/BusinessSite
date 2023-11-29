@@ -1,5 +1,5 @@
-import Footer from '@/src/components/footer/footer'
 import '../src/styles/globals.scss'
+import Footer from '@/src/components/footer/footer'
 import type { Metadata } from 'next'
 import Navigation from '@/src/components/navigation/navigation'
 import PageLayout from '@/src/components/page-layout/pageLayout'
