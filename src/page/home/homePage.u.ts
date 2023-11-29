@@ -8,6 +8,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
+// Images
+import js_img from '../../../public/images/javascript.png';
+import ts_img from '../../../public/images/typescript.png';
+import react_img from '../../../public/images/react.png';
+import next_img from '../../../public/images/nextJs.webp';
+import dotnet_img from '../../../public/images/dotNet.png';
+import docker_img from '../../../public/images/docker.png';
+import { StaticImageData } from 'next/image';
+
 const homePageData = () => {
     const iconTupleArray: {text: string, icon: IconProp}[] = [
         {
@@ -32,36 +41,36 @@ const homePageData = () => {
         }
     ]
 
-    const techStackArray: {alt: string, href: string}[] = [
+    const techStackArray: {alt: string, href: StaticImageData}[] = [
         {
             alt: 'JavaScript',
-            href:'/images/javascript.png'
+            href: js_img
         },
 
         {
             alt: 'TypeScript',
-            href:'/images/typescript.png'
+            href: ts_img
         },
 
         {
             alt: 'React',
-            href:'/images/react.png'
+            href: react_img
         },
 
 
         {
             alt: 'NextJs',
-            href:'/images/nextJs.webp'
+            href: next_img
         },
 
         {
             alt: '.NET',
-            href: '/images/dotNet.png'
+            href: dotnet_img
         },
 
         {
             alt: 'Docker',
-            href: '/images/docker.png'
+            href: docker_img
         }
 
 

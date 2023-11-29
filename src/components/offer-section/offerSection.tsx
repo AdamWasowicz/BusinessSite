@@ -6,6 +6,9 @@ import { SectionWithImage } from '../UI/section/section';
 import styles from './offerSection.module.scss';
 import { useState } from 'react';
 
+// Images
+import service_img from '../../../public/images/service.jpg';
+
 const OfferSection: React.FC = () => {
     const [modalOpen, setModalOpen] = useState<Boolean>(false);
 
@@ -16,7 +19,7 @@ const OfferSection: React.FC = () => {
         <SectionWithImage
                 header='Co oferuję?'
                 text='Oferuję usługi informatyczne takie jak: tworzenie stron internetowych, tworzenie aplikacji webowych oraz korepetycje w atrakcyjnych cenach. Całą listę usług można znaleźć w sekcji pod tytułem "Moje usługi".'
-                imageUrl={'/images/service.jpg'}
+                imageUrl={service_img}
                 imagePosition='right'
             >
                 {

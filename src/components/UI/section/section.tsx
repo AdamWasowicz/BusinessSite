@@ -1,5 +1,5 @@
 import styles from './section.module.scss';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Header from '../header/header';
 import Paragraph from '../paragraph/paragraph';
 
@@ -27,7 +27,7 @@ interface ISectionWithImage {
     id?: string
     header: string,
     text: string,
-    imageUrl: string,
+    imageUrl: StaticImageData | string,
     imagePosition: 'left' | 'right',
     className?: string
     children?: JSX.Element | JSX.Element[],
