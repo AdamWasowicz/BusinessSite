@@ -6,6 +6,9 @@ const environment = process.env.NODE_ENV;
 const nextConfig = {
     output: 'export',
 
+    // GitHub pages
+    basePath: "/business-site",
+
     reactStrictMode: true,
 
     sassOptions: {
