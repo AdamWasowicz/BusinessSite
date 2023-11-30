@@ -13,17 +13,17 @@ import { useState } from 'react';
 const Navigation: React.FC = () => {
     const navigationItems: LinkParams[] = [
         {
-            href: '#about',
+            href: 'about',
             text: 'O mnie'
         },
 
         {
-            href: '#services',
+            href: 'services',
             text: 'Usługi'
         },
 
         {
-            href: '#contact',
+            href: 'contact',
             text: 'Kontakt'
         }
     ]
@@ -32,6 +32,17 @@ const Navigation: React.FC = () => {
 
     const expandNavigationHandler = () => {
         setNavigationExpanded(!navigationExpaned);
+    }
+
+    const navigateToElement = (elementId: string) => {
+        const element = document.getElementById(elementId);
+        if (element === null) {
+            return
+        }
+
+        element.scrollIntoView({
+            behavior: 'smooth'
+        })
     }
 
     return (
@@ -44,13 +55,12 @@ const Navigation: React.FC = () => {
                         navigationItems.map((item, key) => {
                             return (
                                 <li key={key}>
-                                    <Link 
+                                    <button 
                                         className={styles.listItem} 
-                                        href={item.href}
-                                        scroll={true}
+                                        onClick={() => navigateToElement(item.href) }
                                     >
                                         {item.text}
-                                    </Link>
+                                    </button>
                                 </li>
                             )
                         })
