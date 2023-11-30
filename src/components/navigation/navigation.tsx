@@ -13,17 +13,17 @@ import { useState } from 'react';
 const Navigation: React.FC = () => {
     const navigationItems: LinkParams[] = [
         {
-            href: '/#about',
+            href: '#about',
             text: 'O mnie'
         },
 
         {
-            href: '/#services',
+            href: '#services',
             text: 'Usługi'
         },
 
         {
-            href: '/#contact',
+            href: '#contact',
             text: 'Kontakt'
         }
     ]
@@ -47,6 +47,7 @@ const Navigation: React.FC = () => {
                                     <Link 
                                         className={styles.listItem} 
                                         href={item.href}
+                                        scroll={true}
                                     >
                                         {item.text}
                                     </Link>
